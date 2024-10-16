@@ -12,7 +12,7 @@ const Home = () => {
         <Navigation/>
         <Carousel/>
         <MovieList/>
-        <Carousel/>
+        {/* <Carousel/> */}
         {/* <Family_Videos/>
         <Image/> */}
         <Footer/>
