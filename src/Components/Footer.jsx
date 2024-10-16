@@ -1,5 +1,5 @@
 import React from 'react';
-import {  FaMapMarkerAlt, FaPhone, FaEnvelopeOpen, FaTelegramPlane } from 'react-icons/fa';
+import {  FaMapMarkerAlt, FaPhone, FaEnvelopeOpen } from 'react-icons/fa';
 import { LuFacebook } from "react-icons/lu";
 import { SiGoogle } from "react-icons/si";
 import { TfiTwitter } from "react-icons/tfi";
@@ -17,8 +17,8 @@ const Footer = () => {
             
             <div className="mb-6 md:w-1/3">
               <div className="flex items-start">
-              <FaMapMarkerAlt className="text-orange-500 text-3xl mr-4" />
-                <div className="pl-4">
+              <FaMapMarkerAlt className="text-orange-500 text-2xl mr-2" />
+                <div className="">
                   <h4 className="text-white text-lg font-semibold mb-1">Find us</h4>
                   <span className="text-[#757575] text-sm">1010 Avenue, sw 54321, Chandigarh</span>
                 </div>
@@ -28,8 +28,8 @@ const Footer = () => {
             
             <div className="mb-6 md:w-1/3">
               <div className="flex items-start">
-              <FaPhone className="text-orange-500 text-3xl mr-4" />
-                <div className="pl-4">
+              <FaPhone className="text-orange-500 text-2xl mr-2" />
+                <div className="">
                   <h4 className="text-white text-lg font-semibold mb-1">Call us</h4>
                   <span className="text-[#757575] text-sm">9876543210 0</span>
                 </div>
@@ -39,8 +39,8 @@ const Footer = () => {
             
             <div className="mb-6 md:w-1/3">
               <div className="flex items-start">
-              <FaEnvelopeOpen className="text-orange-500 text-3xl mr-4" />
-                <div className="pl-4">
+              <FaEnvelopeOpen className="text-orange-500 text-2xl mr-2" />
+                <div className="">
                   <h4 className="text-white text-lg font-semibold mb-1">Mail us</h4>
                   <span className="text-[#757575] text-sm">mail@info.com</span>
                 </div>
@@ -95,7 +95,7 @@ const Footer = () => {
                   <Link href="/" className="text-[#878787] hover:text-[#ff5e14]">Home</Link>
                 </li>
                 <li className="w-1/2 mb-3">
-                  <Link href="/series" className="text-[#878787] hover:text-[#ff5e14]">Services</Link>
+                  <Link href="#" className="text-[#878787] hover:text-[#ff5e14]">Services</Link>
                 </li>
                 <li className="w-1/2 mb-3">
                   <Link href="/about" className="text-[#878787] hover:text-[#ff5e14]">About</Link>
@@ -114,12 +114,19 @@ const Footer = () => {
                 Subscribe
               </h3>
               <p className="text-[#7e7e7e] text-sm leading-7 mb-6">Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-              <div className="relative">
+              <button
+                className="bg-[#ff5e14] py-2 px-4 rounded-full text-white hover:bg-white hover:text-[#ff5e14] font-semibold shadow-lg hover:shadow-[#ff5e14]/50 transition-shadow duration-300 ease-in-out"
+                onClick={() => window.open("https://www.youtube.com/c/SpaceX", "_blank", "noopener noreferrer")}
+              >
+                Subscribe
+              </button>
+
+              {/* <div className="relative">
                 <input type="text" placeholder="Email Address" className="w-full p-4 bg-[#2E2E2E] text-white border border-[#2E2E2E]"/>
                 <button className="absolute top-0 right-0 bg-[#ff5e14] p-5">
                 <FaTelegramPlane />
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -131,13 +138,7 @@ const Footer = () => {
           <p className="text-[#878787] text-sm text-center md:text-left">
             Copyright &copy; 2018, All Rights Reserved <a href="https://codepen.io/anupkumar92/" className="text-[#ff5e14]">Streamo</a>
           </p>
-          <ul className="hidden md:flex">
-            <li className="ml-6"><a href="#" className="text-[#878787] hover:text-[#ff5e14]">Home</a></li>
-            <li className="ml-6"><a href="#" className="text-[#878787] hover:text-[#ff5e14]">Terms</a></li>
-            <li className="ml-6"><a href="#" className="text-[#878787] hover:text-[#ff5e14]">Privacy</a></li>
-            <li className="ml-6"><a href="#" className="text-[#878787] hover:text-[#ff5e14]">Policy</a></li>
-            <li className="ml-6"><a href="#" className="text-[#878787] hover:text-[#ff5e14]">Contact</a></li>
-          </ul>
+          
         </div>
       </div>
     </footer>

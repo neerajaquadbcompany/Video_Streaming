@@ -1,6 +1,6 @@
 export const movies = [
   {
-    image: "https://img.youtube.com/vi/dW1BIid8Osg/hqdefault.jpg",
+    image: "https://preview.redd.it/cxgzi7jvs2r51.jpg?auto=webp&s=54a1bd4b447a2ef9a7a8d7d528d035854d7f0f49",
     title: "The Lost Expedition",
     videoLink: "https://www.youtube.com/embed/dW1BIid8Osg",
     director: "Richard Clarkson",
@@ -24,7 +24,7 @@ export const movies = [
     description: "When a family inherits a long-abandoned mansion in the countryside, they believe they’ve stumbled upon the perfect getaway. But as strange occurrences begin to unravel, they soon discover that the house holds a dark, malevolent history. What started as a peaceful retreat turns into a nightmarish battle for their souls. With eerie apparitions and terrifying phenomena haunting them, the family must uncover the house's deadly secrets before it's too late. A chilling thriller that will keep you on the edge of your seat."
   },
   {
-    image: "https://img.youtube.com/vi/y6120QOlsfU/hqdefault.jpg",
+    image: "https://tse4.mm.bing.net/th?id=OIP.dkHDPgSki_4eR3LzV1ePMAHaKK&pid=Api&P=0&h=180",
     title: "The Mountain of Laughter",
     videoLink: "https://www.youtube.com/embed/y6120QOlsfU",
     director: "Tommy McLaughlin",
