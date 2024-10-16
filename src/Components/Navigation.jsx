@@ -25,31 +25,34 @@ const Navigation = () => {
           onMouseLeave={() => setIsDropdownOpen(false)}
         >
           <Link className='no-underline text-white' to='#'>Series</Link>
-          {isDropdownOpen && (
-            <div className="absolute left-0 w-48 bg-white text-black rounded shadow-lg z-10">
-              <Link 
-                className="block px-4 py-2 hover:bg-gray-200" 
-                to="/upcoming_page" 
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                Upcoming Video
-              </Link>
-              <Link 
-                className="block px-4 py-2 hover:bg-gray-200" 
-                to="/latest_videos" 
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                Latest Video
-              </Link>
-              <Link 
-                className="block px-4 py-2 hover:bg-gray-200" 
-                to="/old_videos" 
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                Old Video
-              </Link>
-            </div>
-          )}
+          <div 
+            className={`absolute left-0 w-48  bg-gray-800 text-white rounded shadow-lg z-10 transition-all duration-300 ease-in-out transform ${
+              isDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+            }`}
+          >
+            <Link 
+              className="px-4 py-2 flex justify-center items-center hover:bg-[#ff5e14]" 
+              to="/upcoming_page" 
+              onClick={() => setIsDropdownOpen(false)}
+            >
+              <hr className='h-1 text-gray-600'/>
+              Upcoming Video
+            </Link>
+            <Link 
+              className="px-4 py-2 flex justify-center items-center hover:bg-[#ff5e14]" 
+              to="/latest_videos" 
+              onClick={() => setIsDropdownOpen(false)}
+            >
+              Latest Video
+            </Link>
+            <Link 
+              className="px-4 py-2 flex justify-center items-center hover:bg-[#ff5e14]" 
+              to="/old_videos" 
+              onClick={() => setIsDropdownOpen(false)}
+            >
+              Old Video
+            </Link>
+          </div>
         </li>
         <li><Link className='no-underline text-white' to='/about'>About</Link></li>
         <li><Link className='no-underline text-white' to='/contact'>Contact</Link></li>
@@ -82,40 +85,42 @@ const Navigation = () => {
             onMouseLeave={handleDropdownToggle}
           >
             <span className='no-underline text-white cursor-pointer'>Series</span>
-            {isDropdownOpen && (
-              <div className="absolute left-0 w-48 bg-white text-black rounded shadow-lg z-10">
-                <Link 
-                  className="block px-4 py-2 hover:bg-gray-200" 
-                  to="/upcoming_page" 
-                  onClick={() => {
-                    setIsDropdownOpen(false);
-                    toggleSidebar();
-                  }}
-                >
-                  Upcoming Video
-                </Link>
-                <Link 
-                  className="block px-4 py-2 hover:bg-gray-200" 
-                  to="/latest_videos" 
-                  onClick={() => {
-                    setIsDropdownOpen(false);
-                    toggleSidebar();
-                  }}
-                >
-                  Latest Video
-                </Link>
-                <Link 
-                  className="block px-4 py-2 hover:bg-gray-200" 
-                  to="/old_videos" 
-                  onClick={() => {
-                    setIsDropdownOpen(false);
-                    toggleSidebar();
-                  }}
-                >
-                  Old Video
-                </Link>
-              </div>
-            )}
+            <div 
+              className={`absolute left-0 w-48 bg-gray-800 text-white rounded shadow-lg z-10 transition-all duration-300 ease-in-out transform ${
+                isDropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+              }`}
+            >
+              <Link 
+                className=" px-4 py-2 flex justify-center items-center hover:bg-[#ff5e14]" 
+                to="/upcoming_page" 
+                onClick={() => {
+                  setIsDropdownOpen(false);
+                  toggleSidebar();
+                }}
+              >
+                Upcoming Video
+              </Link>
+              <Link 
+                className=" px-4 py-2 flex justify-center items-center hover:bg-[#ff5e14]" 
+                to="/latest_videos" 
+                onClick={() => {
+                  setIsDropdownOpen(false);
+                  toggleSidebar();
+                }}
+              >
+                Latest Video
+              </Link>
+              <Link 
+                className=" px-4 py-2 flex justify-center items-center hover:bg-[#ff5e14]" 
+                to="/old_videos" 
+                onClick={() => {
+                  setIsDropdownOpen(false);
+                  toggleSidebar();
+                }}
+              >
+                Old Video
+              </Link>
+            </div>
           </li>
         </ul>
       </div>
