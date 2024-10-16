@@ -13,8 +13,8 @@ const Home = () => {
         <Carousel/>
         <MovieList/>
         <Carousel/>
-        <Family_Videos/>
-        <Image/>
+        {/* <Family_Videos/>
+        <Image/> */}
         <Footer/>
         
     </div>
