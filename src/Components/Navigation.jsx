@@ -9,6 +9,10 @@ const Navigation = () => {
 
   const toggleSidebar = () => setIsOpen(prevState => !prevState);
 
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(prevState => !prevState);
+  };
+
   return (
     <nav className="bg-black text-white flex justify-between items-center p-6">
       <img src={logo} alt="logo" className="ml-5" />
@@ -22,9 +26,9 @@ const Navigation = () => {
         >
           <Link className='no-underline text-white' to='#'>Series</Link>
           {isDropdownOpen && (
-            <div className="absolute left-0 w-48  bg-white text-black rounded shadow-lg z-10">
+            <div className="absolute left-0 w-48 bg-white text-black rounded shadow-lg z-10">
               <Link 
-                className="block px-4 py-2  hover:bg-gray-200" 
+                className="block px-4 py-2 hover:bg-gray-200" 
                 to="/upcoming_page" 
                 onClick={() => setIsDropdownOpen(false)}
               >
@@ -61,19 +65,58 @@ const Navigation = () => {
         <FaTimes size={28} className="absolute top-4 right-4 cursor-pointer" onClick={toggleSidebar} />
 
         <ul className="flex flex-col items-center gap-8 mt-16 cursor-pointer">
-          {['Home', 'Series', 'About', 'Contact'].map((item) => (
+          {['Home', 'About', 'Contact'].map((item) => (
             <li key={item}>
               <Link 
                 className='no-underline text-white'
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
-                onClick={() => {
-                  toggleSidebar(); 
-                }}
+                onClick={toggleSidebar}
               >
                 {item}
               </Link>
             </li>
           ))}
+          <li 
+            className="relative" 
+            onMouseEnter={handleDropdownToggle} 
+            onMouseLeave={handleDropdownToggle}
+          >
+            <span className='no-underline text-white cursor-pointer'>Series</span>
+            {isDropdownOpen && (
+              <div className="absolute left-0 w-48 bg-white text-black rounded shadow-lg z-10">
+                <Link 
+                  className="block px-4 py-2 hover:bg-gray-200" 
+                  to="/upcoming_page" 
+                  onClick={() => {
+                    setIsDropdownOpen(false);
+                    toggleSidebar();
+                  }}
+                >
+                  Upcoming Video
+                </Link>
+                <Link 
+                  className="block px-4 py-2 hover:bg-gray-200" 
+                  to="/latest_videos" 
+                  onClick={() => {
+                    setIsDropdownOpen(false);
+                    toggleSidebar();
+                  }}
+                >
+                  Latest Video
+                </Link>
+                <Link 
+                  className="block px-4 py-2 hover:bg-gray-200" 
+                  to="/old_videos" 
+                  onClick={() => {
+                    setIsDropdownOpen(false);
+                    toggleSidebar();
+                  }}
+                >
+                  Old Video
+                </Link>
+              </div>
+            )}
+          </li>
         </ul>
       </div>
     </nav>
