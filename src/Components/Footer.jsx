@@ -10,7 +10,7 @@ import logo from '../assets/logo.png'
 const Footer = () => {
   return (
     <footer className="bg-[#151414] relative">
-      <div className="container mx-auto ">
+      <div className="container mx-auto pl-2 lg:pl-0 md:pl-2 xl:pl-2 2xl:pl-2  ">
         
         <div className="pt-5  ">
           <div className="flex flex-wrap ">
@@ -155,7 +155,7 @@ const Footer = () => {
 
       
       <div className="bg-[#202020] py-6">
-        <div className="container mx-auto flex flex-wrap justify-between items-center">
+        <div className="container mx-auto flex flex-wrap justify-between items-center  pl-2 lg:pl-0 md:pl-2 xl:pl-2 2xl:pl-2">
           <p className="text-[#878787] text-sm text-center md:text-left">
             Copyright &copy; 2018, All Rights Reserved <a href="https://codepen.io/anupkumar92/" className="text-[#ff5e14]">Streamo</a>
           </p>
