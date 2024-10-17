@@ -10,50 +10,12 @@ import logo from '../assets/logo.png'
 const Footer = () => {
   return (
     <footer className="bg-[#151414] relative">
-      <div className="container mx-auto">
+      <div className="container mx-auto ">
         
-        <div className="border-b border-[#373636] pt-5 pb-5">
-          <div className="flex flex-wrap justify-between">
+        <div className="pt-5 pb-5 ">
+          <div className="flex flex-wrap ">
             
-            <div className="mb-6 md:w-1/3">
-              <div className="flex items-start">
-              <FaMapMarkerAlt className="text-orange-500 text-2xl mr-2" />
-                <div className="">
-                  <h4 className="text-white text-lg font-semibold mb-1">Find us</h4>
-                  <span className="text-[#757575] text-sm">1010 Avenue, sw 54321, Chandigarh</span>
-                </div>
-              </div>
-            </div>
-
-            
-            <div className="mb-6 md:w-1/3">
-              <div className="flex items-start">
-              <FaPhone className="text-orange-500 text-2xl mr-2" />
-                <div className="">
-                  <h4 className="text-white text-lg font-semibold mb-1">Call us</h4>
-                  <span className="text-[#757575] text-sm">9876543210 0</span>
-                </div>
-              </div>
-            </div>
-
-            
-            <div className="mb-6 md:w-1/3">
-              <div className="flex items-start">
-              <FaEnvelopeOpen className="text-orange-500 text-2xl mr-2" />
-                <div className="">
-                  <h4 className="text-white text-lg font-semibold mb-1">Mail us</h4>
-                  <span className="text-[#757575] text-sm">mail@info.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="pt-5 pb-5">
-          <div className="flex flex-wrap">
-            
-            <div className="mb-6 w-full md:w-1/3">
+            <div className="mb-0 w-full md:w-1/3  ">
               <div className="mb-6">
                 <a href="index.html">
                   <img src={logo} className="w-48" alt="logo" />
@@ -62,7 +24,7 @@ const Footer = () => {
               <p className="text-[#7e7e7e] text-sm leading-7 mb-6">
                 Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing elit.
               </p>
-              <div className='flex flex-col'>
+              {/* <div className='flex flex-col'>
                 <span className="text-white text-lg font-semibold block mb-4">Follow us</span>
                 <div className='flex gap-3'>
                     <Link href="#" className="text-white ">
@@ -82,12 +44,12 @@ const Footer = () => {
                     </Link>
                 </div>
                 
-              </div>
+              </div> */}
             </div>
 
             
-            <div className="mb-6 w-full md:w-1/3">
-              <h3 className="text-white text-lg font-semibold mb-8 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:h-[2px] before:w-[50px] before:bg-[#ff5e14]">
+            <div className="mb-6 w-full md:w-1/3 ">
+              <h3 className="text-white text-md lg:text-lg font-semibold mb-8 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:h-[2px] before:w-[50px] before:bg-[#ff5e14]">
                 Useful Links
               </h3>
               <ul className="flex flex-wrap">
@@ -109,8 +71,45 @@ const Footer = () => {
             </div>
 
             
-            <div className="w-full md:w-1/3">
-              <h3 className="text-white text-lg font-semibold mb-8 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:h-[2px] before:w-[50px] before:bg-[#ff5e14]">
+            <div className="w-full md:w-1/3 ">
+            <h3 className="text-white text-md lg:text-lg font-semibold mb-8 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:h-[2px] before:w-[50px] before:bg-[#ff5e14]">
+                Contact
+              </h3>
+            <div className="flex flex-wrap mt-6 lg:mt-2 justify-between w-full ">
+            
+            <div className="mb-2 md:w-1/3">
+              <div className="flex items-start">
+              <FaMapMarkerAlt className="text-orange-500 text-2xl mr-2 mt-1" />
+                <div className="">
+                  <h4 className="text-white text-md lg:text-lg font-semibold mb-1">Find us</h4>
+                  <span className="text-[#757575] text-sm">1010 Avenue, sw 54321, Chandigarh</span>
+                </div>
+              </div>
+            </div>
+
+        
+            <div className="mb-2 md:w-1/3">
+              <div className="flex items-start">
+              <FaPhone className="text-orange-500 text-md mr-2 mt-1" />
+                <div className="">
+                  <h4 className="text-white text-md lg:text-lg font-semibold mb-1">Call us</h4>
+                  <span className="text-[#757575] text-sm">9876543210 0</span>
+                </div>
+              </div>
+            </div>
+
+        
+            <div className="mb-2 md:w-1/3">
+              <div className="flex items-start">
+              <FaEnvelopeOpen className="text-orange-500 text-md mr-2 mt-1" />
+                <div className="">
+                  <h4 className="text-white text-md lg:text-lg font-semibold mb-1">Mail us</h4>
+                  <span className="text-[#757575] text-sm">mail@info.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+              {/* <h3 className="text-white text-md lg:text-lg font-semibold mb-8 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:h-[2px] before:w-[50px] before:bg-[#ff5e14]">
                 Subscribe
               </h3>
               <p className="text-[#7e7e7e] text-sm leading-7 mb-6">Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
@@ -119,7 +118,7 @@ const Footer = () => {
                 onClick={() => window.open("https://www.youtube.com/c/SpaceX", "_blank", "noopener noreferrer")}
               >
                 Subscribe
-              </button>
+              </button> */}
 
               {/* <div className="relative">
                 <input type="text" placeholder="Email Address" className="w-full p-4 bg-[#2E2E2E] text-white border border-[#2E2E2E]"/>
@@ -128,11 +127,55 @@ const Footer = () => {
                 </button>
               </div> */}
             </div>
+
+            <div className='flex sm:flex-row flex-col justify-between  w-full'>
+              <div className='flex flex-col w-1/2'>
+                <span className="text-white text-md lg:text-lg font-semibold block mb-4">Follow us</span>
+                <div className='flex gap-3'>
+                    <Link href="#" className="text-white ">
+                    <LuFacebook  className='text-white'/>
+                    </Link>
+                    <Link href="#" className="text-white ">
+                    <SiGoogle className='text-white'/>
+                    </Link>
+                    <Link href="#" className="text-white">
+                    <TfiTwitter className='text-white'/>
+                    </Link>
+                    <Link href="#" className="text-white ">
+                    <FaSquareInstagram className='text-white'/>
+                    </Link>
+                    <Link to="#" className="text-white">
+                    <IoLogoYoutube  className='text-white'/>
+                    </Link>
+                </div>  
+              </div>
+              
+              <div className='w-full flex mt-5 lg:mt-0 items-center'>
+                <div className='w-1/2'>
+                  <h3 className="text-white text-md lg:text-lg font-semibold mb-8 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:h-[2px] before:w-[50px] before:bg-[#ff5e14]">
+                    Subscribe
+                  </h3>
+                  <p className="text-[#7e7e7e] text-sm leading-7 mb-6">Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                </div>
+                <div>
+                  <button
+                    className="bg-[#ff5e14] py-2 px-4 rounded-full text-white hover:bg-white hover:text-[#ff5e14] font-semibold shadow-lg hover:shadow-[#ff5e14]/50 transition-shadow duration-300 ease-in-out"
+                    onClick={() => window.open("https://www.youtube.com/c/SpaceX", "_blank", "noopener noreferrer")}
+                  >
+                    Subscribe
+                  </button>
+                </div>
+                
+                
+              </div>
+            </div>
+            
           </div>
+          
         </div>
       </div>
 
-     
+      
       <div className="bg-[#202020] py-6">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           <p className="text-[#878787] text-sm text-center md:text-left">
