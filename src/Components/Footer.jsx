@@ -80,7 +80,7 @@ const Footer = () => {
                 <div className="mb-2 w-full sm:w-1/2 md:w-full flex">
                   <FaMapMarkerAlt className="text-orange-500 text-xl mr-3 mt-1" />
                   <div>
-                    <h4 className="text-white text-md lg:text-md font-semibold ">Find us</h4>
+                    <h4 className="text-white text-md lg:text-[15px] font-semibold ">Find us</h4>
                     <span className="text-[#757575] text-sm">1010 Avenue, sw 54321, Chandigarh</span>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ const Footer = () => {
                 <div className="mb-2 w-full sm:w-1/2 md:w-full flex">
                   <FaPhone className="text-orange-500 text-lg mr-3 mt-1" />
                   <div>
-                    <h4 className="text-white text-md lg:text-md font-semibold ">Call us</h4>
+                    <h4 className="text-white text-md lg:text-[15px] font-semibold ">Call us</h4>
                     <span className="text-[#757575] text-sm">98765432100</span>
                   </div>
                 </div>
@@ -98,7 +98,7 @@ const Footer = () => {
                 <div className=" w-full sm:w-1/2 md:w-full flex">
                   <FaEnvelopeOpen className="text-orange-500 text-lg mr-3 mt-1" />
                   <div>
-                    <h4 className="text-white text-md lg:text-md font-semibold">Mail us</h4>
+                    <h4 className="text-white text-md lg:text-[15px] font-semibold">Mail us</h4>
                     <span className="text-[#757575] text-sm">neerajanaru023@gmail.com</span>
                   </div>
                 </div>
