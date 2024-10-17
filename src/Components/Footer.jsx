@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="bg-[#151414] relative">
       <div className="container mx-auto ">
         
-        <div className="pt-5 pb-5 ">
+        <div className="pt-5  ">
           <div className="flex flex-wrap ">
             
             <div className="mb-0 w-full md:w-1/3  ">
@@ -21,7 +21,7 @@ const Footer = () => {
                   <img src={logo} className="w-48" alt="logo" />
                 </a>
               </div>
-              <p className="text-[#7e7e7e] text-sm leading-7 mb-6">
+              <p className="text-[#7e7e7e] text-sm leading-7 mb-0">
                 Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing elit.
               </p>
               {/* <div className='flex flex-col'>
@@ -48,7 +48,7 @@ const Footer = () => {
             </div>
 
             
-            <div className="mb-6 w-full md:w-1/3 ">
+            <div className=" w-full md:w-1/3 ">
               <h3 className="text-white text-md lg:text-lg font-semibold mb-8 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:h-[2px] before:w-[50px] before:bg-[#ff5e14]">
                 Useful Links
               </h3>
@@ -72,63 +72,41 @@ const Footer = () => {
 
             
             <div className="w-full md:w-1/3 ">
-            <h3 className="text-white text-md lg:text-lg font-semibold mb-8 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:h-[2px] before:w-[50px] before:bg-[#ff5e14]">
+              <h3 className="text-white text-md lg:text-lg font-semibold mb-8 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:h-[2px] before:w-[50px] before:bg-[#ff5e14]">
                 Contact
               </h3>
-            <div className="flex flex-wrap mt-6 lg:mt-2 justify-between w-full ">
-            
-            <div className="mb-2 md:w-1/3">
-              <div className="flex items-start">
-              <FaMapMarkerAlt className="text-orange-500 text-2xl mr-2 mt-1" />
-                <div className="">
-                  <h4 className="text-white text-md lg:text-lg font-semibold mb-1">Find us</h4>
-                  <span className="text-[#757575] text-sm">1010 Avenue, sw 54321, Chandigarh</span>
+              <div className="flex flex-wrap justify-between w-full">
+              
+                <div className="mb-2 w-full sm:w-1/2 md:w-full flex">
+                  <FaMapMarkerAlt className="text-orange-500 text-xl mr-3 mt-1" />
+                  <div>
+                    <h4 className="text-white text-md lg:text-md font-semibold ">Find us</h4>
+                    <span className="text-[#757575] text-sm">1010 Avenue, sw 54321, Chandigarh</span>
+                  </div>
+                </div>
+                
+                
+                <div className="mb-2 w-full sm:w-1/2 md:w-full flex">
+                  <FaPhone className="text-orange-500 text-lg mr-3 mt-1" />
+                  <div>
+                    <h4 className="text-white text-md lg:text-md font-semibold ">Call us</h4>
+                    <span className="text-[#757575] text-sm">98765432100</span>
+                  </div>
+                </div>
+
+                
+                <div className=" w-full sm:w-1/2 md:w-full flex">
+                  <FaEnvelopeOpen className="text-orange-500 text-lg mr-3 mt-1" />
+                  <div>
+                    <h4 className="text-white text-md lg:text-md font-semibold">Mail us</h4>
+                    <span className="text-[#757575] text-sm">neerajanaru023@gmail.com</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-        
-            <div className="mb-2 md:w-1/3">
-              <div className="flex items-start">
-              <FaPhone className="text-orange-500 text-md mr-2 mt-1" />
-                <div className="">
-                  <h4 className="text-white text-md lg:text-lg font-semibold mb-1">Call us</h4>
-                  <span className="text-[#757575] text-sm">9876543210 0</span>
-                </div>
-              </div>
-            </div>
 
-        
-            <div className="mb-2 md:w-1/3">
-              <div className="flex items-start">
-              <FaEnvelopeOpen className="text-orange-500 text-md mr-2 mt-1" />
-                <div className="">
-                  <h4 className="text-white text-md lg:text-lg font-semibold mb-1">Mail us</h4>
-                  <span className="text-[#757575] text-sm">mail@info.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-              {/* <h3 className="text-white text-md lg:text-lg font-semibold mb-8 relative before:content-[''] before:absolute before:bottom-[-15px] before:left-0 before:h-[2px] before:w-[50px] before:bg-[#ff5e14]">
-                Subscribe
-              </h3>
-              <p className="text-[#7e7e7e] text-sm leading-7 mb-6">Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-              <button
-                className="bg-[#ff5e14] py-2 px-4 rounded-full text-white hover:bg-white hover:text-[#ff5e14] font-semibold shadow-lg hover:shadow-[#ff5e14]/50 transition-shadow duration-300 ease-in-out"
-                onClick={() => window.open("https://www.youtube.com/c/SpaceX", "_blank", "noopener noreferrer")}
-              >
-                Subscribe
-              </button> */}
-
-              {/* <div className="relative">
-                <input type="text" placeholder="Email Address" className="w-full p-4 bg-[#2E2E2E] text-white border border-[#2E2E2E]"/>
-                <button className="absolute top-0 right-0 bg-[#ff5e14] p-5">
-                <FaTelegramPlane />
-                </button>
-              </div> */}
-            </div>
-
-            <div className='flex sm:flex-row flex-col justify-between  w-full'>
+            <div className='flex sm:flex-row flex-col justify-between  w-full mt-0 lg:-mt-4'>
               <div className='flex flex-col w-1/2'>
                 <span className="text-white text-md lg:text-lg font-semibold block mb-4">Follow us</span>
                 <div className='flex gap-3'>
@@ -159,7 +137,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <button
-                    className="bg-[#ff5e14] py-2 px-4 rounded-full text-white hover:bg-white hover:text-[#ff5e14] font-semibold shadow-lg hover:shadow-[#ff5e14]/50 transition-shadow duration-300 ease-in-out"
+                    className="bg-[#ff5e14] py-2 px-4 rounded-full w-24 text-white hover:bg-white hover:text-[#ff5e14] font-semibold shadow-lg hover:shadow-[#ff5e14]/50 transition-shadow duration-300 ease-in-out"
                     onClick={() => window.open("https://www.youtube.com/c/SpaceX", "_blank", "noopener noreferrer")}
                   >
                     Subscribe
