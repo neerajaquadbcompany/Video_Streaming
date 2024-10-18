@@ -30,70 +30,62 @@ const  Latest_Page = () =>{
         <div>
             <Navigation/>
             
-    <div className='flex flex-col ml-5 mr-5 lg:ml-20 lg:mr-20'>
-            <div className='flex justify-between mt-4 items-center'>
-                <div className='text-white text-2xl font-semibold'>Latest Videos</div>
-            </div>
+            <div className='w-full flex flex-col items-center justify-center flex-grow pl-5 pr-5'>
+        <div className='text-white text-2xl font-semibold mt-4'>Latest Videos</div>
+        <div className='border border-gray-700 mt-4 w-full max-w-6xl'></div>
 
-            <div className='border border-gray-700 mt-4'></div>
-
-            <div className="mt-4 mb-5 flex justify-center relative scrollbar-hidden overflow-hidden ml-5">
-                <div className="flex flex-col sm:flex-col  md:grid md:grid-cols-2 lg:grid-cols-4 gap-5 overflow-x-hidden w-full scrollbar-hidden">
-                    {isLoading
-                      ? 
-                        Array.from({ length: visibleCount }).map((_, index) => (
-                          <div key={index} className="flex flex-col flex-none relative overflow-hidden mb-5 rounded-lg shadow-lg" style={{ width: '250px' }}>
-                            <Skeleton height={300} /> 
-                            <div className="p-4">
-                              <Skeleton width={180} /> 
-                              <Skeleton width={100} style={{ marginTop: '10px' }} /> 
-                            </div>
-                          </div>
-                        ))
-                      : 
-                    
-                    
-                    movies.slice(0, visibleCount).map((movie, index) => (
-                        <div
-                            key={index}
-                            className="flex flex-col flex-none relative group overflow-hidden mb-5 rounded-lg shadow-lg cursor-pointer"
-                            style={{ width: '250px' }} 
-                        >
-                            <img
-                                src={movie.image}
-                                alt={movie.title}
-                                className="w-full h-[300px] object-cover transition-transform duration-300 transform group-hover:scale-110 group-hover:translate-x-4"
-                            />
-                            <div
-                                className="absolute bottom-0 left-0 right-0 h-1/2 flex flex-col items-center justify-end p-4 bg-gradient-to-t from-[#001229] via-[#001f3f] to-transparent opacity-0 transform translate-y-full transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
-                            >
-                                <h3 className="text-white text-md text-center font-semibold transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0">
-                                    {movie.title}
-                                </h3>
-                                <button
-                                    onClick={() => handleWatchNow(movie)}
-                                    className="mt-2 inline-block px-3 text-sm hover:text-black hover:bg-white py-1 bg-red-600 text-white rounded transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0"
-                                >
-                                    Watch Now
-                                </button>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            
-            {visibleCount < movies.length ? (
-                <button
-                    onClick={handleShowMore}
-                    className="mt-4 px-4 py-2 bg-transparent w-40 mb-3 flex mx-auto justify-center items-center border border-white rounded-full hover:bg-red-600 hover:border-0 text-white   transition duration-300"
-                >
-                    Show More
-                </button>
-            ) : (
-                <div className="mt-4 text-red-600 text-center">No more upcoming videos present</div>
-            )}
+        <div className="mt-4 mb-5 flex justify-center relative scrollbar-hidden overflow-hidden ">
+          <div className="flex flex-col sm:flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-6xl justify-center items-cente">
+            {isLoading
+              ? Array.from({ length: visibleCount }).map((_, index) => (
+                  <div key={index} className="flex flex-col flex-none relative overflow-hidden mb-5 rounded-lg shadow-lg" style={{ width: '250px' }}>
+                    <Skeleton height={300} /> 
+                    <div className="p-4">
+                      <Skeleton width={180} /> 
+                      <Skeleton width={100} style={{ marginTop: '10px' }} /> 
+                    </div>
+                  </div>
+                ))
+              : movies.slice(0, visibleCount).map((movie, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col flex-none relative group overflow-hidden mb-5 rounded-lg shadow-lg cursor-pointer"
+                    style={{ width: '250px' }}
+                  >
+                    <img
+                      src={movie.image}
+                      alt={movie.title}
+                      className="w-full h-[300px] object-cover transition-transform duration-300 transform group-hover:scale-110 group-hover:translate-x-4"
+                    />
+                    <div
+                      className="absolute bottom-0 left-0 right-0 h-1/2 flex flex-col items-center justify-end p-4 bg-gradient-to-t from-[#001229] via-[#001f3f] to-transparent opacity-0 transform translate-y-full transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+                    >
+                      <h3 className="text-white text-md text-center font-semibold transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0">
+                        {movie.title}
+                      </h3>
+                      <button
+                        onClick={() => handleWatchNow(movie)}
+                        className="mt-2 inline-block px-3 text-sm hover:text-black hover:bg-white py-1 bg-red-600 text-white rounded transform translate-y-4 transition-transform duration-300 group-hover:translate-y-0"
+                      >
+                        Watch Now
+                      </button>
+                    </div>
+                  </div>
+                ))}
+          </div>
         </div>
+
+        {visibleCount < movies.length ? (
+          <button
+            onClick={handleShowMore}
+            className="mt-4 px-4 py-2 bg-transparent w-40 mb-3 flex mx-auto justify-center items-center border border-white rounded-full hover:bg-red-600 hover:border-0 text-white transition duration-300"
+          >
+            Show More
+          </button>
+        ) : (
+          <div className="mt-4 text-red-600 text-center">No more upcoming videos present</div>
+        )}
+      </div>
             <Footer/>
         </div>
     );

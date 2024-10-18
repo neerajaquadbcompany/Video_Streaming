@@ -12,7 +12,6 @@ const Upcoming_Page = () => {
   const [isLoading, setIsLoading] = useState(true); 
 
   useEffect(() => {
-    
     const timer = setTimeout(() => {
       setIsLoading(false); 
     }, 2000); 
@@ -28,21 +27,16 @@ const Upcoming_Page = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navigation />
 
-      <div className='flex flex-col ml-5 mr-5 lg:ml-20 lg:mr-20'>
-        <div className='flex justify-between mt-4 items-center'>
-          <div className='text-white text-2xl font-semibold'>Upcoming Videos</div>
-        </div>
-
-        <div className='border border-gray-700 mt-4'></div>
-
-        <div className="mt-4 mb-5 flex justify-center relative scrollbar-hidden overflow-hidden ml-5">
-          <div className="flex flex-col sm:flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-5 overflow-x-hidden w-full scrollbar-hidden">
+      <div className='flex flex-col items-center justify-center flex-grow pl-5 pr-5'>
+        <div className='text-white text-2xl font-semibold mt-4'>Upcoming Videos</div>
+        <div className='border border-gray-700 mt-4 w-full max-w-6xl'></div>
+        <div className="mt-4 mb-5 flex justify-center relative scrollbar-hidden overflow-hidden ">
+          <div className="flex flex-col sm:flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-5 w-full max-w-6xl justify-center items-center">
             {isLoading
-              ? 
-                Array.from({ length: visibleCount }).map((_, index) => (
+              ? Array.from({ length: visibleCount }).map((_, index) => (
                   <div key={index} className="flex flex-col flex-none relative overflow-hidden mb-5 rounded-lg shadow-lg" style={{ width: '250px' }}>
                     <Skeleton height={300} /> 
                     <div className="p-4">
@@ -51,8 +45,7 @@ const Upcoming_Page = () => {
                     </div>
                   </div>
                 ))
-              : 
-                movies.slice(0, visibleCount).map((movie, index) => (
+              : movies.slice(0, visibleCount).map((movie, index) => (
                   <div
                     key={index}
                     className="flex flex-col flex-none relative group overflow-hidden mb-5 rounded-lg shadow-lg cursor-pointer"
