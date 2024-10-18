@@ -58,7 +58,7 @@ const Navigation = () => {
 
       <FaBars size={28} className="md:hidden mr-5 cursor-pointer" onClick={toggleSidebar} />
 
-      <div className={`fixed top-0 right-0 h-full w-64 bg-black text-white transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50`}>
+      <div className={`fixed top-0 right-0 h-full w-full bg-black text-white transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50`}>
         <FaTimes size={28} className="absolute top-4 right-4 cursor-pointer" onClick={toggleSidebar} />
 
         <ul className="flex flex-col items-center gap-8 mt-16 cursor-pointer">
