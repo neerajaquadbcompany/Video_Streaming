@@ -28,6 +28,10 @@ code {
   scrollbar-width: none;      
 }
 
+html, body {
+  overscroll-behavior: none;
+  height: 100%;
+}
 
 
 
